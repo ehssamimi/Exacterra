@@ -289,7 +289,7 @@ or wrap each row of columns in a <div class="row"> */
     position: relative;
     margin: 0 auto;
     width: 100%;
-    background:  url(../img/classy_fabric.png) repeat;
+    background:  url(../img/textcher-w-3.jpg) repeat;
     overflow:hidden;
     padding-top:60px;
 }
@@ -542,21 +542,8 @@ or wrap each row of columns in a <div class="row"> */
 
 }
 
-.blures{
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-}
-.overflow-hidden{
-    overflow : hidden;
-}
-.position-absolute{
-    position: absolute;
-}.position-relative{
-    position: relative;
-}
-.divaa{
-    position: absolute;top: 0;
-}
+
+
 
 
 
@@ -666,74 +653,27 @@ or wrap each row of columns in a <div class="row"> */
 }
 
 .h-15vw{
-    height: 15vw;
+    /*height: 15vw;*/
+    height: calc(8vw + 10em)!important;
 }
 .Img-cover{
     object-fit: cover;
 }
-.pl-col-half {
-    position: relative;
-    width: 50%;
-    display: inline-block;
-    padding-right: 25px;
-    vertical-align: top
+.Img-fill{
+    object-fit: fill;
 }
-
-
-
-
-
- .pl-iso-layers {
-    position: relative;
-    top: -22px
+.rotation-img-layer1{
+    transform: rotateX(68deg) rotateY(0deg) rotateZ(32deg)  translateY( 2px)!important;
+}.rotation-img-layer2{
+    transform: rotateX(68deg) rotateY(0deg) rotateZ(32deg)  translateY( 2px) !important;
+}.rotation-img-layer3{
+    transform: rotateX(68deg) rotateY(0deg) rotateZ(32deg)  translateY( 2px)!important;
 }
+.rotation-img-layer {
+    /*border:2px solid red;*/
+    transform: rotateX(68deg) rotateY(0deg) rotateZ(32deg)  translateY( 2px)!important;
 
-@media only screen and (min-width: 1441px) {
-.pl-iso-layers {
-        right: -80px;
-        top: -20px!important;
-    }
 }
-
-@media only screen and (max-width: 767px), only screen and (max-width: 767px) and (-webkit-device-pixel-ratio: 2), only screen and (max-width: 767px) and (-webkit-device-pixel-ratio: 3) {
- .pl-iso-layers {
-        height: 410px;
-        margin-top: 60px;
-        top: 0
-    }
-}
-
-.pl-iso-layers img {
-    position: absolute;
-    top: 0;
-    left: 60px;
-    width: 780px
-}
-
-@media only screen and (max-width: 767px), only screen and (max-width: 767px) and (-webkit-device-pixel-ratio: 2), only screen and (max-width: 767px) and (-webkit-device-pixel-ratio: 3) {
-.pl-iso-layers img {
-        left: -100px;
-        margin-top: 40px;
-        width: 500px
-    }
-}
-
-.pl-iso-layers img:nth-of-type(1) {
-    top: 0;
-    z-index: 3
-}
-
- .pl-iso-layers img:nth-of-type(2) {
-    top: 0;
-    z-index: 2
-}
-
-.pl-iso-layers img:nth-of-type(3) {
-    top: 0;
-    z-index: 1
-}
-
-
 
 
 

@@ -42,3 +42,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Exot';
+    src: url('Exot350D.ttf');
+    src: url('Exot350D.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'AdobeGothicStd';
+    src: url('AdobeGothicStd-Bold.otf');
+    src: url('AdobeGothicStd-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

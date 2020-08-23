@@ -1,10 +1,25 @@
 
 //PRELOADER
-$(window).on('load', function(){
-  $('body').imagesLoaded(function() {
-    $("#preloader").delay(300).addClass('loaded');
-  }); 
-}); 
+// $(window).on('load', function(){
+//   $('body').imagesLoaded(function() {
+//     $("#preloader").delay(300).addClass('loaded');
+//   });
+// });
+$(document).ready(function () {
+    $('.prl').paroller();
+
+    // $("#par1section, [data-paroller-factor]").paroller({
+    //     factor: 0.8,            // multiplier for scrolling speed and offset
+    //     factorXs: 0.48,          // multiplier for scrolling speed and offset if window width is <576px
+    //     factorSm: 0.48,          // multiplier for scrolling speed and offset if window width is <=768px
+    //     factorMd: 0.58,          // multiplier for scrolling speed and offset if window width is <=1024px
+    //     factorLg: 0.8,          // multiplier for scrolling speed and offset if window width is <=1200px
+    //     type: 'foreground',     // background, foreground
+    //     direction: 'vertical', // vertical, horizontal
+    //     transition: 'transform 0.1s ease' // CSS transition, added on elements where type:'foreground'
+    // });
+
+});
 
 $(document).ready( function() {
 
@@ -173,14 +188,14 @@ if (owlcar.length) {
   function onScroll(event){
     if ($('#hero').length) {     
       var scrollPos = $(document).scrollTop();
-      $('nav ul li a').each(function () {
-          var currLink = $(this);
-          var refElement = $(currLink.attr("href"));
-          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-              $('nav ul li a').removeClass("activelink");
-              currLink.addClass("activelink");
-          }
-      });
+      // $('nav ul li a').each(function () {
+      //     var currLink = $(this);
+      //     var refElement = $(currLink.attr("href"));
+      //     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      //         $('nav ul li a').removeClass("activelink");
+      //         currLink.addClass("activelink");
+      //     }
+      // });
      }              
   }
 
@@ -339,15 +354,56 @@ var $container = $('.masonry');
 }); // document read end 
 
 
+$(window).scroll(function () {
+    var scrollTop = window.pageYOffset;
+
+
+  if (scrollTop >= $('#portfolio3').position().top && scrollTop < ($('#contact').position().top)-(800)  ) {
+      console.log("scrollTop : " + scrollTop)
+      $("#title_page3").css({
+          "top": (scrollTop-$('#portfolio3').position().top + 150) + "px",
+      });
+      // $([document.documentElement, document.body]).animate({
+      //     scrollTop: $("#title_page3").offset().top
+      // }, 2000);
+    }
+    // let def = (($(window).scrollTop() + $(window).height()) / $("#scrollbar-rail").height()) * 10
+    // let persent = Math.round((def + Number.EPSILON) * 100) / 100
+    // console.log("persent" + persent)
+
+    // var width = $(window).width();
+
+    // if (width <= 720) {
+    //     if (persent > 4.2) {
+    //         $("#input-range").val(persent)
+    //     } else {
+    //         $("#input-range").val(1)
+    //     }
+    //
+    // }else {
+    //     if (persent > 1.95) {
+    //         $("#input-range").val(persent)
+    //     } else {
+    //         $("#input-range").val(1)
+    //     }
+    //
+    // }
+
+
+
+});
+
+
+
 $(document).ready(function(){
 
     //.parallax(xPosition, speedFactor, outerHeight) options:
     //xPosition - Horizontal position of the element
     //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
     //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-    $('#parallax-1').parallax("50%", 0.2);
-    $('#parallax-2').parallax("50%", 0.2);
-    $('#parallax-3').parallax("50%", 0.2);
-    $('#parallax-4').parallax("50%", 0.1);
+    // $('#parallax-1').parallax("50%", 0.2);
+    // $('#parallax-2').parallax("50%", 0.2);
+    // $('#parallax-3').parallax("50%", 0.2);
+    // $('#parallax-4').parallax("50%", 0.1);
 
 });
